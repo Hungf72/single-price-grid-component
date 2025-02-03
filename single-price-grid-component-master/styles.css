@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root{
+    --cyan: hsl(179, 62%, 43%);
+    --Bright-yellow: hsl(71, 73%, 54%);
+    --Light-gray: hsl(204, 43%, 93%);
+    --Grayish-blue: hsl(218, 22%, 67%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Karla', sans-serif;
+    background-color: var(--Light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    overflow: hidden;
+    flex-direction: column;
+    width: 100%;
+    max-width: 560px;
+}
+
+h1{
+    color: var(--cyan);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    margin-top: 0.25rem;
+}
+
+.card__header{
+    padding: 2rem 1.5rem 0 2.5rem; 
+}
+
+.card__header p{
+    color: var(--Bright-yellow);
+    font-size: 1rem;
+    padding: 0.75rem 0 0 0;
+}
+
+.card__header .description{
+    color: var(--Grayish-blue);
+    font-size: 0.9rem;
+    line-height: 1.75;
+    padding: 1rem 0 2rem 0;
+}
+
+.card__body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__body--price{
+    background-color: var(--cyan);
+    border-bottom-left-radius: 5px;
+    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+}
+
+.card__body--price h2{
+    font-size: 1rem;
+    color: white;
+    padding: 1.5rem 0 1rem 1.1rem;
+}
+
+.card__body--price p{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1rem;
+    padding: 0rem 1rem 1rem 1.1rem;
+}
+
+.card__body--price span{
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 0 0.1rem 0 0;
+}
+
+.card__body--price .price--description{
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+    padding: 0 1rem 1rem 1.1rem;
+    white-space: nowrap;
+}
+
+.card__body--price button{
+    background-color: var(--Bright-yellow);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    padding: 1rem 0.5rem 1rem 0.5rem;
+    margin-left: 1.1rem;
+    transition: background-color 0.3s;
+    width: 90%;
+    align-self: center;
+}
+
+.card__body--price button:hover{
+    background-color: hsl(71, 73%, 44%);
+}
+
+.card__body--price button:active{
+    background-color: hsl(71, 73%, 34%);
+}
+
+.card__body--why-us{
+    background-color: hsla(179, 62%, 43%, 0.8);
+    border-bottom-right-radius: 5px;
+    display: inline-block;
+    padding: 2.5rem 3rem 2rem 2rem;
+}
+
+.card__body--why-us h2{
+    color: white;
+    font-size: 1rem;
+    padding: 0 0 0.5rem 0;
+}
+
+.card__body--why-us ul{
+    list-style-type: none;
+    padding: 0.5rem 0 0 0;
+}
+
+.card__body--why-us ul li{
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.9rem;
+    padding: 0.125rem 0 0.125rem 0;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 768px){
+    .container{
+        flex-direction: column;
+    }
+
+    .card__body{
+        flex-direction: column;
+    }
+
+    .card__body--price{
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 5px;
+        padding: 1rem 2.5rem 1rem 2.5rem;
+    }
+
+    .card__body--why-us{
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 5px;
+        padding: 2.5rem 1rem 2rem 3.5rem;
+    }
+    
+}
